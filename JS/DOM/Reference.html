@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function fn() {
+        var pRef = document.getElementById("p1");
+        var h2Ref = document.getElementById("h21"); // Took the Reference of H2 element
+
+        h2Ref.innerText = "Hello Javascript"; // changed the content of h2 Element
+        h2Ref.style.color = "red";
+
+        pRef.innerText = "It is a Dom Mainpulation Example......";
+        pRef.style.backgroundColor = "green";
+        pRef.style.padding = "30px";
+        pRef.style.color = "white";
+        pRef.style.fontSize = "20px";
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2 id="h21">Welcome to HTML</h2>
+      <p id="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde debitis
+        magni quos pariatur doloribus iusto. Recusandae sapiente itaque unde
+        nobis?
+      </p>
+      <button onclick="fn()">Change Title</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: beige;
+      }
+      div {
+        background-color: blueviolet;
+        width: 500px;
+        color: cornsilk;
+        text-align: center;
+        margin: 100px auto;
+        padding: 100px;
+        box-shadow: 0 0 10px black;
+      }
+      button {
+        border: none;
+        background-color: rgb(60, 82, 27);
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      function fnWish(wishMessage) {
+        var h2Ref = document.getElementById("wish");
+        if (wishMessage === "GM") {
+          h2Ref.innerText = "Good Morning, Kabir";
+        } else if (wishMessage === "GE") {
+          h2Ref.innerText = "Good Evening, Kabir";
+        } else {
+          h2Ref.innerText = "Good Night, Kabir";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2 id="wish">Welcome to DOM</h2>
+
+      <button onclick="fnWish('GM')">Good Morning</button>
+      <button onclick="fnWish('GE')">Good Evening</button>
+      <button onclick="fnWish('GN')">Good Night</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        box-shadow: 0 0 10px black;
+        padding: 30px;
+        margin: 100px auto;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function wish(Message) {
+        // alert(Message);
+        switch (Message) {
+          case "GM":
+            console.log("Good Morning Kabir");
+
+            break;
+          case "GE":
+            console.log("Good Evening Kabir");
+
+            break;
+          case "GN":
+            console.log("Good Night Kabir");
+
+            break;
+          default:
+            console.log("Data is not available");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2>Wish the People</h2>
+      <button onclick="wish('GM')">Good Morning</button>
+      <button onclick="wish('GE')">Good Evening</button>
+      <button onclick="wish('GN')">Good Night</button>
+      <button onclick="wish('send')">Send</button>
+    </div>
+  </body>
+</html>

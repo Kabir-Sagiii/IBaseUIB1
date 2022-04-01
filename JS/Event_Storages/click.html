@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        box-shadow: 0 0 10px black;
+        padding: 50px;
+        text-align: center;
+        margin: 100px auto;
+        width: 300px;
+      }
+    </style>
+    <script>
+      function fn() {
+        alert("User clciked on para");
+      }
+      function fnChange() {
+        console.log("Changes occured in input box");
+        document.getElementById("h2").innerText =
+          document.getElementById("input1").value;
+      }
+      function fnMoveMouse() {
+        document.getElementById("h2").style.color = "green";
+        console.log("Moved");
+      }
+      function fnColorRed() {
+        document.getElementById("p3").style.backgroundColor = "red";
+      }
+
+      function fnColorOrange() {
+        document.getElementById("p3").style.backgroundColor = "orange";
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <p onclick="fn()">Click the Para</p>
+      <input type="text" id="input1" onkeydown="fnChange()" />
+      <h2 id="h2"></h2>
+      <p
+        id="p3"
+        onmousemove="fnMoveMouse()"
+        onmouseenter="fnColorRed()"
+        onmouseleave="fnColorOrange()"
+      >
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+        totam voluptas mollitia incidunt, sint fugiat consectetur laudantium
+        quidem iure at ullam dignissimos esse quas cum necessitatibus fuga
+        corporis cupiditate. Voluptatum sapiente itaque veritatis quam at
+        eligendi placeat atque nihil soluta?
+      </p>
+    </div>
+  </body>
+</html>

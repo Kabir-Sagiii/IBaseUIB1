@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IFrame</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+      }
+      nav div {
+        border: 2px solid orange;
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 30px;
+        background-color: coral;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      iframe {
+        border: none;
+        width: 100%;
+        height: 650px;
+      }
+      nav {
+        border-right: 2px solid black;
+        padding: 10px;
+      }
+      section {
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div><a target="mainPanel" href="table.html">Home</a></div>
+        <div><a target="mainPanel" href="Apple.html">Apple</a></div>
+        <div><a href="">Oneplus</a></div>
+        <div><a href="">Samsung</a></div>
+        <div><a href="">Vivo</a></div>
+        <div><a href="">Oppo</a></div>
+        <div><a href="">Poco</a></div>
+        <div><a href="">MI</a></div>
+      </nav>
+
+      <section>
+        <iframe name="mainPanel" src="List.html"></iframe>
+      </section>
+    </div>
+  </body>
+</html>

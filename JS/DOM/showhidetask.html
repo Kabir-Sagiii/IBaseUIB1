@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+      div {
+        background-color: blueviolet;
+        width: 500px;
+        color: cornsilk;
+        text-align: center;
+        margin: 50px auto;
+        padding: 100px;
+        box-shadow: 0 0 10px black;
+      }
+      button {
+        border: none;
+        background-color: rgb(60, 82, 27);
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      function fnShowHidePassword() {
+        var passwordRef = document.getElementById("passwordbox");
+        var buttonRef = document.querySelector("button");
+        if (passwordRef.type === "password") {
+          passwordRef.type = "text";
+          buttonRef.innerText = "Hide Password";
+        } else {
+          passwordRef.type = "password";
+          buttonRef.innerText = "Show Password";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2>Show / Hide Password Task</h2>
+      Enter Password:<input type="password" id="passwordbox" />
+      <button onclick="fnShowHidePassword()">Show Password</button>
+    </div>
+  </body>
+</html>

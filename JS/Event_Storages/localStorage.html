@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fn() {
+        localStorage.setItem("name", "Sneha");
+        localStorage.setItem("city", "Delhi");
+
+        sessionStorage.setItem("email", "Sneha@gmail.com");
+        sessionStorage.setItem("phone", 99999);
+      }
+      function fngetData() {
+        var h4Ref1 = document.querySelector("#name");
+        var h4Ref2 = document.querySelector("#city");
+        var h4Ref3 = document.querySelector("#email");
+        var h4Ref4 = document.querySelector("#phone");
+
+        h4Ref1.innerText = localStorage.getItem("name");
+        h4Ref2.innerText = localStorage.getItem("city");
+        h4Ref3.innerText = sessionStorage.getItem("email");
+        h4Ref4.innerText = sessionStorage.getItem("phone");
+      }
+
+      function fnupdateData() {
+        localStorage.setItem("name", "Riya");
+        localStorage.setItem("city", "Indore");
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2>Local Storage</h2>
+      <h4 id="name"></h4>
+      <h4 id="city"></h4>
+      <p>-------------------------</p>
+      <h4 id="email"></h4>
+      <h4 id="phone"></h4>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        ullam distinctio dolor quam dolorem veniam voluptatum fuga repellat sit
+        tenetur?
+      </p>
+      <button onclick="fn()">Store Data</button>
+      <button onclick="fngetData()">Get Data</button>
+      <button onclick="fnupdateData()">update Data</button>
+    </div>
+  </body>
+</html>
